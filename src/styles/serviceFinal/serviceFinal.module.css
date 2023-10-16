@@ -1,0 +1,46 @@
+h3.heading {
+  position: relative;
+}
+h3.heading::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 50%;
+  width: 142px;
+  height: 12px;
+  background-color: rgba(229, 229, 17, 0.8);
+  z-index: -1;
+}
+
+.button {
+  display: block;
+  width: 50%;
+  padding: 12px 55px;
+  text-decoration: none;
+  color: #fff;
+  background-image: linear-gradient(to right, #F72585, #1E96FC);
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  -webkit-margin-start: 20%;
+          margin-inline-start: 20%;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.button:hover {
+  background-image: linear-gradient(to right, #1e96fc, #f72585);
+  box-shadow: 0px 0px 10px #888;
+  color: #fff !important;
+}
+
+@media only screen and (max-width: 499px) {
+  div.element {
+    padding-right: 0px !important;
+  }
+  .button {
+    width: 80%;
+    font-size: 0.8rem;
+    margin: auto !important;
+    padding: 7px 10px;
+  }
+}/*# sourceMappingURL=serviceFinal.module.css.map */

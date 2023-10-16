@@ -1,0 +1,15 @@
+h3.heading {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: 50%;
+      width: 142px;
+      height: 12px;
+      background-color: rgba(229, 229, 17, 0.8);
+      z-index: -1;
+    }
+  }
+
+ 

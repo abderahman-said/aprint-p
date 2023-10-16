@@ -1,0 +1,179 @@
+.LoginSection {
+  min-height: 100vh;
+  padding: 50px 0;
+  /* background-image: linear-gradient(to right, #1e96fc, #80dc74); */
+}
+
+.LogPage {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.LoginSection .disabled {
+  opacity: 0.4 !important;
+}
+
+.LoginSection .loginDiv {
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  padding: 40px;
+  width: 40%;
+  border-radius: 10px;
+  background-color: white;
+  margin: auto;
+  min-height: 100vh;
+}
+
+.LoginSection .loginDiv form input {
+  margin-top: 25px !important;
+  font-size: 0.9rem;
+  padding: 5px 20px;
+}
+
+.LoginSection .loginDiv input[type="submit"] {
+  border-radius: 5px !important;
+  font-size: 0.85rem !important;
+  margin-top: 30px !important;
+}
+
+.LoginSection a:not(.not) {
+  display: block;
+  width: 50%;
+  text-decoration: none;
+  margin-top: 14px;
+  font-size: 0.85rem;
+  -webkit-margin-start: auto !important;
+  margin-inline-start: auto !important;
+  -webkit-padding-end: 20px;
+  padding-inline-end: 20px;
+}
+
+.LoginSection a.not {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=login.module.css.map */
+
+.SideSection {
+  width: 60%;
+  height: 100vh;
+  background-color: rgba(10, 53, 101, 1);
+}
+
+.HeaderLog {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dedede;
+}
+
+.HeaderLog a {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.HeaderLog a:hover {
+  color: black !important;
+}
+
+.HeaderLog div {
+  width: 1px;
+  height: 30px;
+  background-color: #dedede;
+}
+
+.notactive {
+  color: rgba(114, 114, 114, 1);
+  font-size: clamp(16px, 2vw, 18px) !important;
+}
+
+.active {
+  position: relative;
+  color: black !important;
+  font-weight: bold;
+  font-size: clamp(20px, 2vw, 22px) !important;
+  /* padding-bottom: 10ox; */
+}
+
+.active::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: -13px;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 5px;
+  background-color: rgba(241, 231, 102, 1);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.iconSection {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.iconSection div {
+  width: 100%;
+  /* width: 50px; */
+  height: 50px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.iconSection div svg {
+  width: 70%;
+  height: 70%;
+}
+
+.iconSection div:nth-of-type(1) svg {
+  color: rgba(3, 169, 244, 1);
+}
+
+.iconSection div:nth-of-type(2) svg {
+  color: black;
+}
+
+.iconSection div:nth-of-type(3) svg {
+  color: rgba(25, 118, 210, 1);
+}
+
+.loginDiv h4 {
+  font-size: clamp(15px, 2vw, 16px);
+}
+
+.loginDiv label svg {
+  color: rgba(215, 54, 151, 1);
+}
+@media (max-width: 767.98px) {
+  .LoginSection .loginDiv {
+    width: 100%;
+  }
+  .SideSection {
+    width: 100%;
+    display: none;
+  }
+  .LoginSection {
+    padding: 0;
+  }
+}

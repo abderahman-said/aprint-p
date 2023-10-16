@@ -1,0 +1,148 @@
+.cartSection {
+  background-image: url(../../assets/images/cart/Group\ 35386.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0px 20px;
+  h3.heading {
+    position: relative;
+    width: 93%;
+    margin: auto;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: 6%;
+      width: 122px;
+      height: 12px;
+      background-color: rgba(229, 229, 17, 0.8);
+      z-index: -1;
+    }
+  }
+  table {
+    margin-top: 20px;
+    width: 93%;
+    margin: auto;
+    overflow-x: auto;
+  }
+  tbody tr {
+    border: none !important;
+  }
+  th,
+  td {
+    padding: 10px;
+  }
+  .serviceItem {
+    width: 60% !important;
+    height: 80px;
+    border: none !important;
+    img {
+      width: 40% !important;
+    }
+    h4 {
+      font-size: 0.9rem !important;
+      font-weight: 400;
+    }
+  }
+  .deleteTd {
+    svg {
+      font-size: 20px;
+      color: red;
+      cursor: pointer;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  select {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  .leftSide {
+    width: 100%;
+  }
+  input[type="submit"] {
+    margin: 10px auto !important;
+    width: 90% !important;
+  }
+  .form .copon {
+    width: 70%;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+  .form .copon::placeholder {
+    font-size: 0.8rem;
+  }
+  .form .coponBtn {
+    display: block;
+    width: 130px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #f72585, #1e96fc);
+    color: #fff !important;
+    transition: background 1s !important;
+    cursor: pointer;
+    &:hover {
+      background-image: linear-gradient(to right, #1e96fc, #f72585);
+      box-shadow: 0px 0px 10px #888;
+    }
+    width: 25% !important;
+    text-align: center;
+    padding: 3px 10px !important;
+    font-size: 0.8rem;
+    margin-inline-end: -8px !important;
+    height: 28px;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cartSection {
+    select {
+      width: 100% !important;
+
+    }
+  }
+}
+@media only screen and (max-width: 499px) {
+  .cartSection {
+    select {
+     font-size: .6rem;
+      
+    }
+  }
+    div.serviceItem#serviceItem{
+      height: 60px;
+      div h4{
+        font-size: .8rem !important;
+        margin: 0px !important;
+        // margin-inline-start: 1.5rem !important;
+        text-align: center;
+      }
+      div p{
+        font-size: .7rem !important;
+        margin-top: 5px;
+        text-align: center;
+      }
+      img{
+        height: 70px;
+      }
+      width: 100% !important;
+      div:first-of-type{
+        // background-color: yellow;
+        padding: 0px !important;
+      }
+    }
+    .priceOf{
+      font-size: .7rem;
+      margin-bottom: 0px !important;
+    }
+ 
+ 
+}

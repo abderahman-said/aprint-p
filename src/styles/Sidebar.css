@@ -1,0 +1,151 @@
+main {
+  width: 100%;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.sidebar {
+  background: white;
+  color: #000;
+  /* min-height: 100vh; */
+  /* height: 100%; */
+  width: 200px;
+  transition: all 0.3s;
+}
+
+.SideActive {
+  width: 200px;
+
+}
+
+.SideNormal {
+  width: 50px;
+
+}
+
+.LogoImgContainet {
+  width: 50px;
+  height: 50px;
+}
+
+.top_section {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+.logo {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  /* font-size: 30px; */
+}
+
+.bars {
+  display: flex;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 50px;
+
+}
+
+.close {
+  display: none;
+}
+
+.link {
+  display: flex;
+  color: black;
+  padding: 10px 15px;
+  gap: 7px;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.link:hover {
+  /* background:lightskyblue; */
+
+  color: var(--main_color);
+  transition: all 0.5s;
+}
+
+.active {
+  /* background: lightskyblue; */
+  color: var(--main_color);
+}
+
+.icon {
+  font-size: 14px;
+
+}
+
+.link_text {
+  font-size: 15px;
+}
+
+@media (max-width: 767.98px) {
+
+  .sidebar {
+    position: absolute;
+    z-index: 9;
+    left: -50px;
+    /* width: 250px; */
+
+  }
+
+  .SideActive {
+    width: 200px;
+    left: 0;
+  }
+
+  .SideNormal {
+    width: 50px;
+    left: -50px;
+
+  }
+
+  main {
+    padding: 0;
+  }
+
+  .bars {
+    z-index: 8;
+    position: absolute;
+    top: 7%;
+    right: -95%;
+    /* background-color: white; */
+  }
+
+  .close {
+    /* position: relative;
+    z-index: 999; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 50px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+  }
+
+  .BarsActive {
+    display: flex;
+  }
+
+  .BarsNone {
+    display: none;
+  }
+}
+
+.ActiveLink {
+  background: linear-gradient(149.94deg, #F72585 -27.42%, #1E96FC 156.83%);
+  /* color: #3E4F94; */
+  /* opacity: 0.2; */
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}

@@ -1,0 +1,72 @@
+.productSection {
+    margin-top: 50px;
+
+    img {
+        display: block;
+        width: 80%;
+        height: 80vh;
+        margin-inline-start: auto;
+        border-radius: 10px;
+    }
+
+    select {
+        width: 20%;
+        margin-top: 10px;
+        border-radius: 4px;
+        padding: 2px;
+        border: 1px solid #9999;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    .custom_file_upload {
+        border: 1px solid #9999;
+        padding: 6px 12px;
+        cursor: pointer;
+        display: block;
+        width: 60%;
+        margin-top: -2px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .uIconContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background-image: linear-gradient(#1E96FC , #80DC74);
+        padding: 2px;
+        border-radius: 2px;
+        svg{
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+    textarea{
+        width: 60%;
+        background-color: transparent;
+        border: 1px solid #9999;
+        font-size: .9rem;
+    }
+   
+}
+
+@media only screen and (max-width: 768px) {
+    .second{
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    select{
+        width: 60% !important;
+    }
+    label[for = file]{
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,36 @@
+.addressSection {
+    background-color: #F0F0F0;
+    padding-bottom: 100px;
+    padding-top: 50px;
+  h3.heading {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      right: 8%;
+      width: 192px;
+      height: 12px;
+      background-color: rgba(229, 229, 17, 0.8);
+      z-index: -1;
+    }
+  }
+  .addNewAddress {
+    font-size: .9rem;
+    padding: 10px 40px;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-image: linear-gradient(to right,#1E96FC , #80DC74);
+  }
+  .addressContainer{
+    background-color: #fff;
+    padding: 20px 15px;
+    border-radius: 8px;
+    svg{
+        margin-inline-end: 8px;
+    }
+  }
+  
+}

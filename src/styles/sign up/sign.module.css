@@ -1,0 +1,11 @@
+.SignUp .loginDiv {
+  width: 60% !important;
+}
+.SignUp input[name=phone] {
+  width: 188%;
+}
+
+.error_message {
+  font-size: 0.7rem !important;
+  background-color: red;
+}/*# sourceMappingURL=sign.module.css.map */

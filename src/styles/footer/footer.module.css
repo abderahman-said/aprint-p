@@ -1,0 +1,244 @@
+.container {
+  width: 85% !important;
+  margin: auto;
+}
+
+.footer {
+  margin-top: 20px;
+  padding-top: 100px;
+  padding-bottom: 10px;
+  margin-bottom: 0px !important;
+  background-image: url(../../assets/footer.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  color: #fff;
+}
+
+.footer .footerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .imgLogo {
+  width: 13%;
+  margin-top: -12px;
+}
+
+.footer .middle {
+  justify-content: space-around;
+  -webkit-margin-start: -80px;
+  margin-inline-start: -80px;
+}
+
+.footer .middle a {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.footer .middle a:hover {
+  color: #FDC500 !important;
+  text-decoration: underline;
+}
+
+.footer .middle ul {
+  padding: 0;
+}
+
+.footer .middle li {
+  position: relative;
+}
+
+.footer .middle li::before {
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  content: ".";
+  font-size: 10px;
+  color: #fff;
+}
+
+.footer .last svg {
+  font-size: 1.6rem;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer .last svg:hover {
+  box-shadow: 0px 0px 5px #fff;
+}
+
+.hr {
+  background-color: #B6B7CD;
+  height: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.lastLink {
+  color: #fff;
+  text-decoration: none;
+}
+
+.lastLink:hover {
+  color: #FDC500 !important;
+  text-decoration: underline;
+}
+
+.footerContainer2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imgLogo2 {
+  width: 20%;
+  margin-top: -5px;
+  -webkit-margin-end: -10px !important;
+  margin-inline-end: -10px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .footerContainer {
+    overflow: hidden;
+    flex-direction: column;
+  }
+
+  .footerContainer .class1 {
+    width: 80% !important;
+    margin: 30px auto;
+  }
+
+  .footerContainer .middle {
+    width: 90% !important;
+    -webkit-margin-start: 40px;
+    margin-inline-start: 40px;
+  }
+
+  .footerContainer .last {
+    width: 12% !important;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    -webkit-margin-start: 74px;
+    margin-inline-start: 74px;
+  }
+
+  .footerContainer2 ul,
+  .footerContainer2 div {
+    width: 150%;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .footerContainer .class1 {
+    width: 100% !important;
+    margin-top: 30px;
+    -webkit-margin-start: 30px;
+    margin-inline-start: 30px;
+  }
+
+  .footerContainer .class1 p {
+    margin: 0 !important;
+    margin-top: 10px !important;
+    font-size: 0.6rem !important;
+  }
+
+  .footerContainer .last {
+    width: 20% !important;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    -webkit-margin-start: 34px;
+    margin-inline-start: 34px;
+  }
+
+  .footerContainer .last h6 {
+    font-size: 0.7rem !important;
+  }
+
+  .footerContainer .last svg {
+    font-size: 0.9rem;
+  }
+
+  .footerContainer .last .extra {
+    margin: 0 !important;
+  }
+
+  .footerContainer .middle a {
+    font-size: 0.6rem !important;
+    margin: 0 !important;
+  }
+
+  .footerContainer .middle li {
+    margin: 0 !important;
+  }
+
+  .footerContainer .middle li::before {
+    position: absolute;
+    top: 4px;
+    right: -10px;
+  }
+
+  .footerContainer2 ul,
+  .footerContainer2 div {
+    width: 80% !important;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .class1 {
+    margin: 10px auto !important;
+  }
+
+  .footer {
+    background-size: cover;
+  }
+
+  .FooterfristDiv {
+    justify-content: center !important;
+  }
+
+  .FooterfristDiv div {
+    width: 60% !important;
+  }
+
+  .Footerinfo {
+    text-align: center !important;
+    width: 100% !important;
+    margin: 5px auto !important;
+  }
+
+  .middle {
+    margin: 10px auto !important;
+    flex-wrap: wrap;
+  }
+
+  .middle div {
+    flex-basis: 100% !important;
+    text-align: center;
+  }
+
+  .last {
+    margin: 10px auto !important;
+  }
+
+  .footerContainer2 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footerContainer2 div {
+    width: 100% !important;
+    flex-basis: 100%;
+  }
+
+  .footerContainer2 div p {
+    width: 100% !important;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=footer.module.css.map */

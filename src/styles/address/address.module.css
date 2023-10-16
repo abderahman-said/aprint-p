@@ -1,0 +1,54 @@
+.addressSection {
+  background-color: #F0F0F0;
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+
+.addressSection h3.heading {
+  position: relative;
+}
+
+.addressSection h3.heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 5px;
+  background-color: rgba(229, 229, 17, 0.8);
+  z-index: 1;
+}
+
+.addressSection .addNewAddress {
+  font-size: 0.9rem;
+  padding: 10px 40px;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, #1E96FC, #80DC74);
+}
+
+.addressSection .addressContainer {
+  background-color: #fff;
+  padding: 20px 15px;
+  border-radius: 8px;
+}
+
+.addressSection .addressContainer svg {
+  -webkit-margin-end: 8px;
+  margin-inline-end: 8px;
+}
+
+/*# sourceMappingURL=address.module.css.map */
+
+.EditBtn {
+  height: fit-content;
+  box-shadow: none !important;
+  border: 1px solid #3E4F94;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}

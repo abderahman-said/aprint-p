@@ -1,0 +1,13 @@
+.SignUp{
+    .loginDiv{
+        width: 60% !important;
+       
+    }
+    input[name=phone] {
+        width: 188%;
+    }
+}
+.error_message{
+    font-size: .7rem !important;
+    background-color: red;
+}

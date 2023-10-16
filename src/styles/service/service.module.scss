@@ -1,0 +1,24 @@
+.serviceSection{
+    h3.heading {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 22px;
+          right: 50%;
+          width: 142px;
+          height: 12px;
+          background-color: rgba(229, 229, 17, 0.8);
+          z-index: -1;
+        }
+      }
+}
+
+@media only screen and (max-width: 499px) {
+  .subProduct{
+    p{
+      font-size: .8rem;
+    }
+  }
+}
+

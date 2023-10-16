@@ -1,0 +1,42 @@
+h3.heading {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 9%;
+    width: 72px;
+    height: 12px;
+    background-color: rgba(229, 229, 17, 0.8);
+    z-index: -1;
+  }
+}
+.currentSection {
+    background-color: #F0F0F0;
+    a.links{
+        text-decoration: none !important;
+        color: #000 !important;
+        background: red;
+        &:hover{
+            color: rgba(73, 73, 243, 0.491) !important;
+        }
+    }
+}
+.serviceItemCont{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    transition: all .4s;
+    img{
+        border-radius: 0px 10px 10px 0px;
+        width: 56%;
+    }
+    color: #000 !important;
+    text-decoration: none;
+    &:hover{
+        box-shadow: 0px 0px 5px #888;
+    }
+    
+}
+

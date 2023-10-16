@@ -1,0 +1,150 @@
+.profile .hero {
+  background-color: #f0f0f0;
+  background-image: url(../../assets/images/profile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  position: relative;
+}
+
+.profile .hero .img {
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.profile .hero .img .hover {
+  transition: 1s;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.profile .hero .img .hover svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+
+.profile .hero .img:hover .hover {
+  display: block;
+}
+
+.profile .hero .img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile .info {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  background-color: #f0f0f0;
+}
+
+.profile .lastIcon {
+  cursor: pointer;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  font-size: 1.3rem;
+}
+
+.inputs svg {
+  margin-right: 5px;
+  color: rgba(62, 79, 148, 1);
+}
+
+.inputs p {
+  margin-right: 5px;
+}
+
+.inputs p:nth-of-type(2) {
+  color: rgba(30, 150, 252, 1);
+  border-left: 1px solid gray;
+  padding-left: 10px;
+}
+
+.Save {
+  background: linear-gradient(158.61deg, #1e96fc -36.21%, #80dc74 140.9%);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  color: white;
+}
+
+.Invoices {
+  background-color: transparent;
+  border: 1px solid rgba(62, 79, 148, 1);
+  padding: 10px 30px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  /* color: white; */
+}
+
+@media only screen and (max-width: 1024px) {
+  .inputs {
+    font-size: 0.7rem;
+  }
+
+  .container {
+    width: 100% !important;
+  }
+
+  .all {
+    padding: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .info .all {
+    padding: 10px !important;
+  }
+
+  p.password {
+    margin-right: 0px !important;
+    -webkit-margin-start: 35px !important;
+    margin-inline-start: 35px !important;
+  }
+
+  p.phone {
+    margin-right: 0px !important;
+    -webkit-margin-end: 55px !important;
+    margin-inline-end: 55px !important;
+  }
+
+  p.email {
+    margin-right: 0px !important;
+    -webkit-margin-start: 35px !important;
+    margin-inline-start: 35px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .Save,
+  .Invoices {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/*# sourceMappingURL=profile.module.css.map */

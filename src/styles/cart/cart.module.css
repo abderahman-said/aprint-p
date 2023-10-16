@@ -1,0 +1,183 @@
+.cartSection {
+  background-image: url(../../assets/images/cart/Group\ 35386.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0px 20px;
+}
+
+.cartSection h3.heading {
+  position: relative;
+  width: 93%;
+  margin: auto;
+}
+
+.cartSection h3.heading::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 6%;
+  width: 122px;
+  height: 12px;
+  background-color: rgba(229, 229, 17, 0.8);
+  z-index: -1;
+}
+
+.cartSection table {
+  margin-top: 20px;
+  width: 93%;
+  margin: auto;
+  overflow-x: auto;
+}
+
+.cartSection tbody tr {
+  border: none !important;
+}
+
+.cartSection th,
+.cartSection td {
+  padding: 10px;
+}
+
+.cartSection .serviceItem {
+  width: 60% !important;
+  height: 120px;
+  padding: 13px;
+  border: none !important;
+}
+
+.cartSection .serviceItem img {
+  width: 40% !important;
+}
+
+.cartSection .serviceItem h4 {
+  font-size: 0.9rem !important;
+  font-weight: 400;
+}
+
+.cartSection .deleteTd svg {
+  font-size: 20px;
+  color: red;
+  cursor: pointer;
+}
+
+.cartSection a {
+  text-decoration: none;
+  color: #000;
+}
+
+.cartSection select {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.cartSection .leftSide {
+  width: 100%;
+}
+
+.cartSection input[type=submit] {
+  margin: 10px auto !important;
+  padding: 10px 40px !important;
+  width: fit-content;
+  border-radius: 30px !important;
+  background: linear-gradient(158.61deg, #4075BB -36.21%, #80AEE8 140.9%) !important;
+  -webkit-border-radius: 30px !important;
+  -moz-border-radius: 30px !important;
+  -ms-border-radius: 30px !important;
+  -o-border-radius: 30px !important;
+}
+
+.cartSection .form .copon {
+  width: 70%;
+  height: 28px;
+  font-size: 0.8rem;
+}
+
+.cartSection .form .copon::-moz-placeholder {
+  font-size: 0.8rem;
+}
+
+.cartSection .form .copon:-ms-input-placeholder {
+  font-size: 0.8rem;
+}
+
+.cartSection .form .copon::placeholder {
+  font-size: 0.8rem;
+}
+
+.cartSection .form .coponBtn {
+  display: block;
+  width: 130px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background-image: linear-gradient(to right, #f72585, #1e96fc);
+  color: #fff !important;
+  transition: background 1s !important;
+  cursor: pointer;
+  width: 25% !important;
+  text-align: center;
+  padding: 3px 10px !important;
+  font-size: 0.8rem;
+  -webkit-margin-end: -8px !important;
+  margin-inline-end: -8px !important;
+  height: 28px;
+  margin-top: 10px;
+}
+
+.cartSection .form .coponBtn:hover {
+  background-image: linear-gradient(to right, #1e96fc, #f72585);
+  box-shadow: 0px 0px 10px #888;
+}
+
+@media only screen and (max-width: 768px) {
+  .cartSection select {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 499px) {
+  .cartSection select {
+    font-size: 0.6rem;
+  }
+
+  div.serviceItem#serviceItem {
+    height: 60px;
+    width: 100% !important;
+  }
+
+  div.serviceItem#serviceItem div h4 {
+    font-size: 0.8rem !important;
+    margin: 0px !important;
+    text-align: center;
+  }
+
+  div.serviceItem#serviceItem div p {
+    font-size: 0.7rem !important;
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  div.serviceItem#serviceItem img {
+    height: 70px;
+  }
+
+  div.serviceItem#serviceItem div:first-of-type {
+    padding: 0px !important;
+  }
+
+  .priceOf {
+    font-size: 0.7rem;
+    margin-bottom: 0px !important;
+  }
+}
+
+/*# sourceMappingURL=cart.module.css.map */
+.Total {
+  text-align: center;
+  color: rgba(62, 79, 148, 1);
+}

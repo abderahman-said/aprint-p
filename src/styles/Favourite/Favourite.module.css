@@ -1,0 +1,26 @@
+/* .favourite {
+  background: #F0F0F0;
+  min-height: 100vh;
+  position: relative;
+  padding: 50px 0;
+  z-index: -2;
+} */
+
+.productItem {
+  border-radius: 15px 15px 0px 0px;
+  overflow: hidden;
+}
+
+.productItem img {
+  width: 110%;
+  -webkit-margin-start: -15px;
+  margin-inline-start: -15px;
+  height: 190px !important;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.productItem .arrowCont2 {
+  -webkit-margin-end: 0.3rem;
+  margin-inline-end: 0.3rem;
+  margin-top: 5px !important;
+}

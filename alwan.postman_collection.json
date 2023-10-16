@@ -1,0 +1,2881 @@
+{
+	"info": {
+		"_postman_id": "031880ea-a50a-4ede-b1cf-d344a214de47",
+		"name": "alwan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Password",
+								"value": "12345678",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ehab",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "essamhamdy425@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phoneKey",
+									"value": "+20",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "1002691210",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dashboard.mobtkra-press.com/api/register",
+							"protocol": "https",
+							"host": [
+								"dashboard",
+								"mobtkra-press",
+								"com"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify email code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "en",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user2@gamil.com",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "2698",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/verify/email/code",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"verify",
+								"email",
+								"code"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resend Code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/resend/code",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"resend",
+								"code"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user22@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/login",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reset password",
+			"item": [
+				{
+					"name": "send code reset password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/send/code/reset/password",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"send",
+								"code",
+								"reset",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify password code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "675012",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/verify/password/code",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"verify",
+								"password",
+								"code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resend Code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/resend/code",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"resend",
+								"code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "essam@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/reset/password",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"reset",
+								"password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register and Login Social",
+			"item": [
+				{
+					"name": "register social",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "essam hamdy ",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "user3@gamil.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/register/social",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"register",
+								"social"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login Social",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user3@gamil.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/login/social",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"login",
+								"social"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ads",
+			"item": [
+				{
+					"name": "get all Ads",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "dashboard.mobtkra-press.com/api/ads",
+							"host": [
+								"dashboard",
+								"mobtkra-press",
+								"com"
+							],
+							"path": [
+								"api",
+								"ads"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contact Us",
+			"item": [
+				{
+					"name": "contact us",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "essam",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "essam@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "شغال",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/contact/us",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"contact",
+								"us"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Main Product",
+			"item": [
+				{
+					"name": "all Main Product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/all/main/product",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"main",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search Main Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "21|3C45GZhOyf6zNrf8LFulccSMu0AkHNDI3g7qXoZl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mainProductName",
+									"value": "omnis",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/search/main/product",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"search",
+								"main",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Sub Product",
+			"item": [
+				{
+					"name": "all Sub Product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/all/sub/product",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"sub",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sub product belong main product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mainProductId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/all/sub/product/belong/main/product",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"sub",
+								"product",
+								"belong",
+								"main",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "one Sub Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "subProductId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/one/sub/product",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"one",
+								"sub",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search Sub Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "subProductName",
+									"value": "Erika",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/search/sub/product",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"search",
+								"sub",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Main Service",
+			"item": [
+				{
+					"name": "all Main Service",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/all/main/service",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"main",
+								"service"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search Main Service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "21|3C45GZhOyf6zNrf8LFulccSMu0AkHNDI3g7qXoZl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mainProductName",
+									"value": "omnis",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/search/main/service?mainServiceName=",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"search",
+								"main",
+								"service"
+							],
+							"query": [
+								{
+									"key": "mainServiceName",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sub Service",
+			"item": [
+				{
+					"name": "all sub service",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/all/sub/service",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"sub",
+								"service"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sub service belong main service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mainServiceId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/all/sub/service/belong/main/service",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"sub",
+								"service",
+								"belong",
+								"main",
+								"service"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "one sub service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "subServiceId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/one/sub/service",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"one",
+								"sub",
+								"service"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search Sub Service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "subServiceName",
+									"value": "aut",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/search/sub/service",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"search",
+								"sub",
+								"service"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Offers",
+			"item": [
+				{
+					"name": "all Offers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/all/offers",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"offers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "Add Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "15|bwRx8RSaKgfTEXFhYQxNnaWaiqEX2NCXyu5ebHdp",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "city",
+									"value": "دمياط",
+									"type": "text"
+								},
+								{
+									"key": "region",
+									"value": "العباسية",
+									"type": "text"
+								},
+								{
+									"key": "fullAddress",
+									"value": "بجوار المسجد",
+									"type": "text"
+								},
+								{
+									"key": "addressType",
+									"value": "Home",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/add/address",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"add",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "15|bwRx8RSaKgfTEXFhYQxNnaWaiqEX2NCXyu5ebHdp",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/all/addresses",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Edit Info",
+			"item": [
+				{
+					"name": "Name",
+					"item": [
+						{
+							"name": "edit name",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "13|PQSi14h9P9sEUP7qVnqb0hIFEqf9kGsdhvAhMQ3C",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "",
+										"type": "text"
+									},
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "essam",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/api/edit/name",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"edit",
+										"name"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Email",
+					"item": [
+						{
+							"name": "edit email",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "13|PQSi14h9P9sEUP7qVnqb0hIFEqf9kGsdhvAhMQ3C",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user22@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/api/edit/email",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"edit",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "check code to change email",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "13|PQSi14h9P9sEUP7qVnqb0hIFEqf9kGsdhvAhMQ3C",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user22@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "2495",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/api/check/code/to/change/email",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"check",
+										"code",
+										"to",
+										"change",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resend Code",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/api/resend/code",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"resend",
+										"code"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "edit Phone",
+					"item": [
+						{
+							"name": "edit Phone",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "13|PQSi14h9P9sEUP7qVnqb0hIFEqf9kGsdhvAhMQ3C",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "1002694325",
+											"type": "text"
+										},
+										{
+											"key": "phoneKey",
+											"value": "+20",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/api/edit/phone",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"edit",
+										"phone"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "edit Password",
+					"item": [
+						{
+							"name": "edit Password",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "13|PQSi14h9P9sEUP7qVnqb0hIFEqf9kGsdhvAhMQ3C",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "oldPassword",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "newPassword",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/api/edit/password",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"edit",
+										"password"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Image",
+					"item": [
+						{
+							"name": "edit img",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "21|3C45GZhOyf6zNrf8LFulccSMu0AkHNDI3g7qXoZl",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "newImage",
+											"type": "file",
+											"src": "/C:/Users/Essam AL_agamy/Desktop/alwaan/logo/alwaan_logo.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/api/edit/img",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"api",
+										"edit",
+										"img"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Delete Account",
+			"item": [
+				{
+					"name": "Delete Account",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/delete/account",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"delete",
+								"account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logout",
+			"item": [
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/logout",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User information",
+			"item": [
+				{
+					"name": "User information",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "21|3C45GZhOyf6zNrf8LFulccSMu0AkHNDI3g7qXoZl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{domain}}/api/user/info",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"info"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "all Notification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "15|bwRx8RSaKgfTEXFhYQxNnaWaiqEX2NCXyu5ebHdp",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/all/notifications",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete All Notification",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/delete/all/notifications",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"delete",
+								"all",
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete One Notification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "15|bwRx8RSaKgfTEXFhYQxNnaWaiqEX2NCXyu5ebHdp",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "notificationId",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/delete/one/notification",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"delete",
+								"one",
+								"notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "number Of Notification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "15|bwRx8RSaKgfTEXFhYQxNnaWaiqEX2NCXyu5ebHdp",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/number/of/notifications",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"number",
+								"of",
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company Branch",
+			"item": [
+				{
+					"name": "all company branch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "21|3C45GZhOyf6zNrf8LFulccSMu0AkHNDI3g7qXoZl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/all/company/branch",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"company",
+								"branch"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Favorites",
+			"item": [
+				{
+					"name": "all Favorites",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "15|bwRx8RSaKgfTEXFhYQxNnaWaiqEX2NCXyu5ebHdp",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/all/product/favorites",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"product",
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add Product Favorite",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "15|bwRx8RSaKgfTEXFhYQxNnaWaiqEX2NCXyu5ebHdp",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/add/product/favorite",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"add",
+								"product",
+								"favorite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Product Favorite",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "15|bwRx8RSaKgfTEXFhYQxNnaWaiqEX2NCXyu5ebHdp",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/delete/product/favorite",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"delete",
+								"product",
+								"favorite"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carts",
+			"item": [
+				{
+					"name": "All Carts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "21|3C45GZhOyf6zNrf8LFulccSMu0AkHNDI3g7qXoZl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/all/product/carts",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"product",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add Product Carts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "142|1vrldawARvwcZtBt36AD7oefMhxXp9SIyiTpiasT",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Essam AL_agamy/Desktop/alwaan/logo/alwaan_logo.png"
+								},
+								{
+									"key": "details",
+									"value": "ddddddddddd",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/add/product/cart",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"add",
+								"product",
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Product Carts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "15|bwRx8RSaKgfTEXFhYQxNnaWaiqEX2NCXyu5ebHdp",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/delete/product/cart",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"delete",
+								"product",
+								"cart"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Cobons",
+			"item": [
+				{
+					"name": "check cobon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "21|3C45GZhOyf6zNrf8LFulccSMu0AkHNDI3g7qXoZl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "cobon",
+									"value": "CsjcJf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/check/cobon",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"check",
+								"cobon"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Buy Product",
+			"item": [
+				{
+					"name": "buy product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "142|1vrldawARvwcZtBt36AD7oefMhxXp9SIyiTpiasT",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "products",
+									"value": "[\n                {\n                  \"product_id\" : 2,\n                  \"quantity\" : 200,\n                  \"price\" : 20\n                }\n            ]",
+									"description": "[\n                {\n                  \"product_id\" : 1,\n                  \"quantity\" : 100,\n                  \"price\" : 10\n                },\n                {\n                  \"product_id\" : 2,\n                  \"quantity\" : 200,\n                  \"price\" : 20\n                },\n                {\n                  \"product_id\" : 5,\n                  \"quantity\" : 300,\n                  \"price\" : 30\n                }\n            ]",
+									"type": "text"
+								},
+								{
+									"key": "address_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "discountPercentage",
+									"value": "80",
+									"description": "nullable",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/buy/products",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"buy",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Buy Service",
+			"item": [
+				{
+					"name": "service Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "21|3C45GZhOyf6zNrf8LFulccSMu0AkHNDI3g7qXoZl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "service_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "details",
+									"value": "طباعة لوجو للشركة",
+									"type": "text"
+								},
+								{
+									"key": "user_file",
+									"type": "file",
+									"src": "/C:/Users/Essam AL_agamy/Desktop/alwaan/1.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://dashboard.mobtkra-press.com/api/service/request",
+							"protocol": "https",
+							"host": [
+								"dashboard",
+								"mobtkra-press",
+								"com"
+							],
+							"path": [
+								"api",
+								"service",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resend service request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "21|3C45GZhOyf6zNrf8LFulccSMu0AkHNDI3g7qXoZl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "order_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "details",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "user_file",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/resend/service/request",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"resend",
+								"service",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accepted service request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "21|3C45GZhOyf6zNrf8LFulccSMu0AkHNDI3g7qXoZl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "order_id",
+									"value": "14986141",
+									"type": "text"
+								},
+								{
+									"key": "address_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "service_price",
+									"value": "200",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/buy/service",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"buy",
+								"service"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Product and Service",
+			"item": [
+				{
+					"name": "all Order Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "21|3C45GZhOyf6zNrf8LFulccSMu0AkHNDI3g7qXoZl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/all/order/products",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"order",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all Order Products Done",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "21|3C45GZhOyf6zNrf8LFulccSMu0AkHNDI3g7qXoZl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/all/order/products/done",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"order",
+								"products",
+								"done"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all Order Services",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "25|LOKk0c29jdOtWor6TxAjOLOySUfSgIYoTmqrnnEk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/all/order/services",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"order",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all Order Services Done",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "21|3C45GZhOyf6zNrf8LFulccSMu0AkHNDI3g7qXoZl",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "lang",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/all/order/services/done",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"all",
+								"order",
+								"services",
+								"done"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/test",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://alwan.test:90",
+			"type": "string"
+		}
+	]
+}

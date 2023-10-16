@@ -1,0 +1,91 @@
+.profile{
+    .hero{
+        background-color: #F0F0F0;
+        background-image: url(../../assets/images/profile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 30vh;
+        position: relative;
+        .img{
+            position: relative;
+            transition: .3s;
+            cursor: pointer;
+            .hover{
+                transition: 1s;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,-0%);
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-color: rgba(0,0,0,.4);
+                display: none;
+                svg{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    font-size: 2rem;
+                }
+            }
+            &:hover{
+                .hover{
+                    display: block;
+                }
+            }
+            img{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+            position: absolute;
+            top: 110%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+    }
+    .info{
+        padding-top: 150px;
+        padding-bottom: 100px;
+        background-color: #F0F0F0;
+    }
+    .lastIcon{
+        cursor: pointer;
+        margin-inline-start: auto;
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .inputs{
+        font-size: .7rem;
+    }
+    .container{
+        width: 100% !important;
+        
+    }
+    .all{
+        padding: 10px !important;
+    }
+}
+@media only screen and (max-width: 499px) {
+    .info .all{
+        padding: 10px !important;
+    }
+    p.password{
+        margin-right: 0px !important;
+        margin-inline-start: 35px !important;
+        
+    }
+    p.phone{
+        margin-right: 0px !important;
+        margin-inline-end: 55px !important;
+    }
+    p.email{
+         margin-right: 0px !important;
+        margin-inline-start: 35px !important;
+    }
+}

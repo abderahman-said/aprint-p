@@ -1,0 +1,132 @@
+.productSection {
+  margin-top: 50px;
+}
+.productSection img {
+  display: block;
+  width: 80%;
+  height: 80vh;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+  border-radius: 10px;
+}
+.productSection select {
+  width: 20%;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 2px;
+  border: 1px solid rgba(153, 153, 153, 0.6);
+}
+.productSection input[type=file] {
+  display: none;
+}
+.productSection .custom_file_upload {
+  border: 1px solid rgba(153, 153, 153, 0.6);
+  padding: 6px 12px;
+  cursor: pointer;
+  display: block;
+  width: 60%;
+  margin-top: -2px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productSection .uIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-image: linear-gradient(#1E96FC, #80DC74);
+  padding: 2px;
+  border-radius: 2px;
+}
+.productSection .uIconContainer svg {
+  color: #fff;
+  font-size: 18px;
+}
+.productSection textarea {
+  width: 60%;
+  background-color: transparent;
+  border: 1px solid rgba(153, 153, 153, 0.6);
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .second {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  select {
+    width: 60% !important;
+  }
+  label[for=file] {
+    width: 100% !important;
+  }
+}/*# sourceMappingURL=product.module.css.map */
+.servicesItem {
+  background-color: #fff;
+  border: 1px solid #9ea5ab;
+  display: flex;
+  border-radius: 10px;
+  height: 25vh;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.servicesItem img {
+  width: 50%;
+  margin-top: -4px;
+  -webkit-margin-start: -2px;
+  margin-inline-start: -2px;
+}
+.servicesItem .gradient2:not(.not) {
+  -webkit-margin-start: 25px !important;
+  margin-inline-start: 25px !important;
+  margin-top: -15px !important;
+}
+
+.servicesItem .not {
+  -webkit-margin-start: 25px !important;
+  margin-inline-start: 25px !important;
+}
+
+.servicesItem .parentHover:hover .gradient2 {
+  display: block;
+  -webkit-animation-name: visitHoverServices !important;
+  animation-name: visitHoverServices !important;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.servicesItem .parentHover:hover .arrowCont {
+  background-image: linear-gradient(60deg, #80dc74, #1e96fc);
+}
+
+.servicesItem .parentHover:hover .arrowCont svg {
+  color: #fff !important;
+}
+
+@media only screen and (max-width: 499px) {
+  .servicesItem {
+    width: 95% !important;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .serviceSection .servicesItem {
+    height: 25vh !important;
+  }
+
+  .serviceSection .servicesItem img {
+    height: 25vh;
+  }
+
+  .serviceSection .servicesItem p {
+    font-size: 0.8rem;
+  }
+}
