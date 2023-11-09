@@ -24,7 +24,6 @@ const TestProduct = ({ isUser }) => {
   const { id, id2 } = useParams();
   const [value, setValue] = useState(false);
   const { productArr, summeryArr } = useSelector((state) => state.ContactSlice);
-  console.log("productArr" , productArr)
 
   const dispatch = useDispatch();
 
@@ -44,7 +43,6 @@ const TestProduct = ({ isUser }) => {
   const [width, setWidth] = useState("");
   const [height, setHeight] = useState("");
   const [limit, setLimit] = useState("");
-  console.log("limit" ,limit)
   useEffect(() => {
     if (value === false) {
       setValue(true);
@@ -114,20 +112,25 @@ const [selectedFiles, setSelectedFiles] = useState([]);
   const navigate = useNavigate();
 
   const AddToCart = () => {
-    const data = {
-      product_id: id2,
-      quantity: quantity,
-      width: width,
-      height: height,
-      options: All_ids,
-      Files: selectedFiles,
-      Order_name: Order_name, 
-    };
+    const data = new FormData();
+    data.append('product_id', id2);
+    data.append('quantity', quantity);
+    data.append('width', width);
+    data.append('height', height);
+    data.append('Order_name', Order_name);
+    
+    // Append each option from All_ids to the FormData
+    All_ids.forEach((option, index) => {
+      data.append(`options[${index}]`, option);
+    });
+    // Append the uploaded files to the FormData
+    selectedFiles.forEach((file, index) => {
+      data.append(`Files[${index}]`, file);
+    console.log("" , `Files[${index}]` )
 
-    if (
-      !localStorage.getItem("ut") ||
-      localStorage.getItem("ut") === "undefind"
-    ) {
+    });
+
+    if (!localStorage.getItem("ut") || localStorage.getItem("ut") === "undefined") {
       navigate("/login");
     } else {
       dispatch(AddToCartApi(data))
@@ -137,6 +140,7 @@ const [selectedFiles, setSelectedFiles] = useState([]);
         });
     }
   };
+
 
 
   const [HeadersId, setHeadersId] = useState(null);
@@ -202,14 +206,59 @@ const updateFilesParameter = (count) => {
   );
 };
 
+const semdfils = (e) => {
+    const files = e.target.files;
 
+    // Check if the number of selected files exceeds the maximum limit (10 in this case)
+    if (files.length > 10) {
+      showError('error', 'Error Message', 'You can only upload a maximum of 10 files.');
+      e.target.value = null;
+      return;
+    }
+
+    // Display selected files in a div with id 'uploaded-files'
+    const uploadedFilesDiv = document.getElementById('uploaded-files');
+    uploadedFilesDiv.innerHTML = ''; // Clear previous content
+
+    for (let i = 0; i < files.length; i++) {
+      const fileName = files[i].name;
+      const fileListItem = document.createElement('div');
+      fileListItem.textContent = fileName;
+      uploadedFilesDiv.appendChild(fileListItem);
+    }
+
+    setSelectedFiles(Array.from(files));
+    setUploadedFilesCount(files.length);
+    updateFilesParameter(files.length);
+    
+    let FinalData = [];
+    for (let i = 0; i < All_ids.length; i++) {
+      if (All_ids[i] !== undefined) {
+        FinalData = [
+          ...FinalData,
+          `options[${i}]=${All_ids[i]}&`,
+        ];
+      }
+    }
+    dispatch(
+      getProductSummery(
+        `?product_id=${id2}&${FinalData.toString().replace(
+          /,/g,
+          ""
+        )}&width=${width}&height=${height}&quantity=${quantity}&files=${files.length}`
+      )
+    );
+}
 
 const handleFileDelete = () => {
   setSelectedFiles([]);
   setUploadedFilesCount(0);
   updateFilesParameter(0); // Call the function with 0
-};
 
+  // Clear the content of the 'uploaded-files' element
+  const uploadedFilesElement = document.getElementById('uploaded-files');
+  uploadedFilesElement.textContent = ''; // Clear the content
+};
   useEffect(() => {
     if (summeryArr) {
       const data = summeryArr.options.slice(1, summeryArr.options.length);
@@ -516,9 +565,9 @@ const handleFileDelete = () => {
                                                       <p>{e.description}</p>
                                                     </>
                                                   )}
-                                                   {console.log(SubOption)}
+                                                   {/* {console.log(SubOption)} */}
                                                   {SubOption ?
-                                                    e.id == SubOption.id ? 
+                                                    e.id === SubOption.id ? 
                                                     <div className="row">
                                                     {SubOption ? (
                                                       <div className="row">
@@ -545,13 +594,23 @@ const handleFileDelete = () => {
                                                                               item.id
                                                                             }
                                                                             className="col-6"
+                                                                             
+                                                                            style={{
+                                                                              textAlign:
+                                                                                "center",
+                                                                                borderColor:
+                                                                                      All_ids.includes(
+                                                                                        item.id
+                                                                                      )
+                                                                                        ? "#d1d1d1"
+                                                                                        : "#d1d1d10a3565",
+                                                                                 
+                                                                            }}
                                                                           >
                                                                             {/* -------------------------------------- */}
                                                                             <div
-                                                                              style={{
-                                                                                textAlign:
-                                                                                  "center",
-                                                                              }}
+                                                                             
+                                                                              
                                                                               onClick={() => {
                                                                                 setSubOptionTwo(
                                                                                   item
@@ -600,6 +659,8 @@ const handleFileDelete = () => {
                                                                                   setSelected(
                                                                                     New_selected
                                                                                   );
+                                                                                  {console.log("Option_data" , parseFloat(item.id))}
+
                                                                                   if (
                                                                                     All_ids.length <=
                                                                                     0
@@ -607,7 +668,7 @@ const handleFileDelete = () => {
                                                                                     dispatch(
                                                                                       getProductSummery(
                                                                                         `?product_id=${id2}&options[0]=${parseFloat(
-                                                                                          item.id
+                                                                                          item.id ,parseFloat(item.id)
                                                                                         )}&width=${width}&height=${height}&quantity=${quantity}`
                                                                                       )
                                                                                     );
@@ -637,6 +698,7 @@ const handleFileDelete = () => {
                                                                                       src={
                                                                                         item.image
                                                                                       }
+
                                                                                       alt=""
                                                                                       width={
                                                                                         100
@@ -692,7 +754,7 @@ const handleFileDelete = () => {
                                                                                 {SubOptionTwo &&
                                                                                 SubOptionTwo.id ===
                                                                                   item.id ? (
-                                                                                  <div className="row">
+                                                                                  <div className="row p-0 m-0">
                                                                                     {SubOptionTwo.childrens.map(
                                                                                       (
                                                                                         element
@@ -752,7 +814,6 @@ const handleFileDelete = () => {
                                                                                                       ...old_selected,
                                                                                                       Option_data,
                                                                                                     ];
-
                                                                                                   setTimeout(() => {
                                                                                                     setSelected(
                                                                                                       New_selected
@@ -897,62 +958,78 @@ const handleFileDelete = () => {
                             <label htmlFor="Height ">Quantity</label>
                             <p> Finishing Notes</p>
                             <input
-                              type="number"
-                              max={limit}
-                              value={quantity}
-                              
-                              onChange={(e) => {
-                                if (quantity > limit) {
-                                  document.querySelector('.limit').style.opacity = 1;
-                                } else {
-                                  document.querySelector('.limit').style.opacity = 0; // Hide the <p> element
-                                }
-                                if (quantity < e.target.value) {
-                                  document.querySelector('.limit').style.opacity = 0; // Hide the <p> element
-                                }
-                                let FinalData = [];
-                                for (let i = 0; i <= All_ids.length; i++) {
-                                  if (All_ids[i] !== undefined) {
-                                    FinalData = [
-                                      ...FinalData,
-                                      `options[${i}]=${All_ids[i]}&`,
-                                    ];
-                                  }
-                                }
-                                if (e.target.value <= 0) {
-                                  setQuantity(1);
-                                  dispatch(
-                                    getProductSummery(
-                                      `?product_id=${id2}&${FinalData.toString().replace(
-                                        /,/g,
-                                        ""
-                                      )}&width=${width}&height=${height}&quantity=${1}`
-                                    )
-                                  );
-                                } else {
-                                  setQuantity(e.target.value);
-                                  dispatch(
-                                    getProductSummery(
-                                      `?product_id=${id2}&${FinalData.toString().replace(
-                                        /,/g,
-                                        ""
-                                      )}&width=${width}&height=${height}&quantity=${
-                                        e.target.value
-                                      }`
-                                    )
-                                  );
-                                }
-                              }}
-                            />
+  type="number"
+  max={limit}
+  value={quantity}
+  onChange={(e) => {
+    // Parse the input value to an integer
+    const newValue = parseInt(e.target.value, 10);
+    
+    if (isNaN(newValue) || newValue >= limit) {
+      document.querySelector('.limit').style.opacity = 1; // Hide the <p> element
+      setQuantity(limit);
+    } else if (newValue < 1) {
+      // If the input is less than 1, set the quantity to 1
+      setQuantity(1);
+    } else {
+      document.querySelector('.limit').style.opacity = 0; // Hide the <p> element
+
+      setQuantity(newValue);
+    }
+
+    // Update the product summary based on the new quantity
+    let FinalData = [];
+    for (let i = 0; i <= All_ids.length; i++) {
+      if (All_ids[i] !== undefined) {
+        FinalData = [
+          ...FinalData,
+          `options[${i}]=${All_ids[i]}&`,
+        ];
+      }
+    }
+
+    dispatch(
+      getProductSummery(
+        `?product_id=${id2}&${FinalData.toString().replace(
+          /,/g,
+          ""
+        )}&width=${width}&height=${height}&quantity=${quantity}`
+      )
+    );
+  }}
+/>
+
                             <p class="limit" >Please select a quantity less than or equal to {limit}</p>
 
                           </div>
                         </div>
                       </div>
+                      
                     </div>
+                    
                   </div>
+                  <div className="btn-fils">
+              <button className="btn-upload"> 
+              <input
+  type="file"
+  multiple={true}
+  className="file-input"
+  onChange={semdfils}
+/>
+
+                <span>Upload</span>  
+                </button>
+        
+      <button className="btn-delete" onClick={handleFileDelete}>
+       <span>Delete</span>  
+      </button>
+   
+        
+                </div>
+                <div id="uploaded-files"></div>
                 </div>
               </div>
+              
             </div>
             <div className="col-md-4">
               <div
@@ -986,7 +1063,7 @@ const handleFileDelete = () => {
                           </span>
                           {GetOptionName
                             ? GetOptionName.map((item) => {
-                                return <span>{` - ${item.name} `}</span>;
+                                return <span key={item.id}>{` - ${item.name} `}</span>;
                               })
                             : null}
                         </div>
@@ -1038,56 +1115,8 @@ const handleFileDelete = () => {
                     </div>
                   )}
                 </div>
-                <div className="btn-fils">
-              <div className="btn-upload"> 
-              <input
-  type="file"
-  multiple={true}
-  className="file-input"
-  onChange={(e) => {
-    const files = e.target.files;
-
-    // Check if the number of selected files exceeds the maximum limit (10 in this case)
-    if (files.length > 10) {
-      showError('error', 'Error Message', 'You can only upload a maximum of 10 files.');
-      e.target.value = null;
-      return;
-    }
-
-    setSelectedFiles(Array.from(files));
-    setUploadedFilesCount(files.length);
-    updateFilesParameter(files.length);
-    let FinalData = [];
-    for (let i = 0; i < All_ids.length; i++) {
-      if (All_ids[i] !== undefined) {
-        FinalData = [
-          ...FinalData,
-          `options[${i}]=${All_ids[i]}&`,
-        ];
-      }
-    }
-    dispatch(
-      getProductSummery(
-        `?product_id=${id2}&${FinalData.toString().replace(
-          /,/g,
-          ""
-        )}&width=${width}&height=${height}&quantity=${quantity}&files=${files.length}`
-      )
-    );
-  }}
-/>
-
-                <span>Upload</span>  
-                </div>
-        
-      <button className="btn-delete" onClick={handleFileDelete}>
-       <span>Delete</span>  
-      </button>
-   
-      {/* <p> {uploadedFilesCount}</p> */}
-        
-                </div>
                 
+
                 <div className="order_now order_now_button">
                   {summeryArr && (
                     <div className="CardTest ">
